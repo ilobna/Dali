@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salvador Dalí</title>
+    <style>
+      body {
+        background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/110/591/original/Salvador_Dali.jpg?1705269993");
+        background-size: cover;
+      }
+
+      h1 {
+        text-align: center;
+        font-weight: bold;
+        color: rgb(147, 147, 64);
+      }
+      h2 {
+        text-align: center;
+        font-family: Georgia, "Times New Roman", Times, serif;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+      }
+      img {
+        max-width: 100%;
+        border-radius: 15px;
+      }
+      p {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        padding: 10px 15px;
+        font-size: 20px;
+        background: pink;
+        border: 1px solid rgb(200, 55, 120);
+        border-radius: 6px;
+        transition: all 150ms ease-in-out;
+      }
+      button:hover {
+        cursor: pointer;
+        background: rgb(246, 110, 110);
+      }
+      footer {
+        text-align: center;
+        color: rgb(250, 234, 244);
+        margin: 30px 0;
+      }
+      .theme-button {
+        display: block;
+        margin: 0 auto;
+        padding: 5 8px;
+        font-size: 10px;
+        background: black;
+        color: white;
+        transition: all 150ms ease-in-out;
+      }
+      .theme-button:hover {
+        background: wheat;
+        color: black;
+        cursor: pointer;
+      }
+      .salvador-dali-picture {
+        border-radius: 10px;
+        transition: all 150ms ease-in-out;
+      }
+      .salvador-dali-picture:hover {
+        filter: contrast(80%);
+        transform: scale(1.1);
+        cursor: pointer;
+      }
+      .grid {
+        margin: 15px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 20px;
+      }
+      .grid img {
+        width: 100%;
+        border-radius: 8px;
+        transition: all 150ms ease-in-out;
+      }
+      .grid img:hover {
+        transform: scale(2);
+      }
+      .dark {
+        background: black;
+      }
+      .dark .container {
+        background: rgb(74, 74, 74);
+      }
+      .dark a {
+        color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="theme-button">Dark theme</button>
+    <div class="container">
+      <h1>Salvador Dalí</h1>
+      <h2>A Great Surrealist Artist🎨</h2>
+      <a
+        href="https://en.wikipedia.org/wiki/Salvador_Dal%C3%AD"
+        target="_blank"
+      ></a>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/110/591/original/Salvador_Dali.jpg?1705269993"
+        alt=""
+        class="dali-intro-picture"
+      />
+      <div class="grid">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/110/531/original/2000.17_SlaveMarket_without_frame_web.jpg?1705255714"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/110/529/original/the-persistence-of-memory-1931.jpg?1705255621"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/110/602/original/download.jpg?1705272728"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/110/603/original/The_Temptation_of_St._Anthony.jpg?1705272913"
+          alt=""
+        />
+      </div>
+      <p>
+        Salvador Dalí (1904–1989) was a pioneering Spanish surrealist artist,
+        renowned for his eccentric personality and innovative contributions to
+        the art world. Born in Figueres, Catalonia, Dalí displayed artistic
+        talent early on and became a leading figure in the surrealist movement.
+        His iconic works, such as "The Persistence of Memory" (1931), featuring
+        melting clocks, are celebrated for their dreamlike and imaginative
+        qualities. Beyond painting, Dalí ventured into sculpture, film, and
+        collaborations with prominent figures. His eccentric persona, flamboyant
+        mustache, and unique fashion sense added to his public image. Dalí's
+        legacy endures as a symbol of artistic innovation, and his works
+        continue to captivate audiences worldwide.
+        <br /><br />
+        📖
+        <a href="https://en.wikipedia.org/wiki/Salvador_Dal%C3%AD">
+          <strong>Read on Wikipedia</strong>
+        </a>
+      </p>
+      <button>Visit Museum</button>
+    </div>
+    <footer>
+      Coded with ❤️by
+      <a href="https://www.shecodes.io/graduates/87743-lobna-elkerdawy"
+        >Lobna Elkerdawy</a
+      >
+    </footer>
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+      let themeButton = document.querySelector(".theme-button");
+      themeButton.addEventListener("click", changeTheme);
+    </script>
+  </body>
+</html>
